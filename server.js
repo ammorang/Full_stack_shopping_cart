@@ -3,11 +3,10 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser"); 
-const cart = require("./route/cart-route");
+const cartRoute = require("./route/cart-route");
 
 app.use(bodyParser.json());
-app.use("/portal", cart); 
-
+app.use("/portal", cartRoute); 
 app.use(express.static(__dirname + "/public"));
 
 let port = 3000;

@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Monospace", sans-serif;
+  background-color: #EDD295;
+}
+
+h1 {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form {
+  width: 40%;
+  height: 20%;
+  margin: 10px auto;
+  background-color: #05AFA5;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.finput, .cinput {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+p {
+  display: inline;
+}
+
+.cinput.small {
+  width: 15%;
+}
+
+.material-icons.md-36 { 
+  font-size: 36px; 
+  color: #FB6350;
+  position: relative;
+  top: 12px;
+}
+
+.deletebtn {
+  width: 36px;
+  height: 18px;
+  margin-bottom: 20px;
+}
+
+#addbtn {
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #FB6350;
+  color: #EDD295;
+  font-weight: 900;
+}
+
+.container {
+  width: 40%;
+  height: 40%;
+  margin: 40px auto;
+  background-color: #9A5E4A;
+  border-radius: 10px;
+}
+
+.categories {
+  width: 50%;
+  display: flex;
+}
+
+#item {
+  margin-top: 10px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#cost {
+  margin-top: 10px;
+  padding-left: 25%;
+  padding-right: 20%;
+}
+
+#quantity {
+  margin-top: 10px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
+
+
+/* 
+#FB6350
+#05AFA5
+#142224
+#EDD295
+#9A5E4A */

@@ -1,7 +1,6 @@
 {
   "name": "full-stack-shopping-cart",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
-  }
+    "express": "^4.16.3",
+    "node": "^10.4.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ammorang/Full_stack_shopping_cart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ammorang/Full_stack_shopping_cart/issues"
+  },
+  "homepage": "https://github.com/ammorang/Full_stack_shopping_cart#readme",
+  "description": ""
 }

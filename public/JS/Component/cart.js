@@ -2,19 +2,32 @@
 
 const cart = {
   template: `
-  <section ng-repeat="item in $ctrl.items">
-    <input ng-blur="$ctrl.updateItem(item);" ng-model="item.product">
-    <input ng-blur="$ctrl.updateItem(item);" ng-model="item.price">
-    <input ng-blur="$ctrl.updateItem(item);" ng-model="item.quantity">
-    <a href="" ng-click="$ctrl.deleteItem(item.id);">Delete</a>
-  </section>
-
+  <div class="form">
   <form ng-submit="$ctrl.addItem($ctrl.newItem);">
-    <input type="text" placeholder="Product Name" ng-model="$ctrl.newItem.product">
-    <input type="text" placeholder="Product Price" ng-model="$ctrl.newItem.price">
-    <input type="text" placeholder="Product Quantity" ng-model="$ctrl.newItem.quantity">
-    <button>Add Item</button>
+    <input class="finput" type="text" placeholder="Product Name" ng-model="$ctrl.newItem.product">
+    <input class="finput" type="text" placeholder="Product Price" ng-model="$ctrl.newItem.price">
+    <input class="finput" type="text" placeholder="Product Quantity" ng-model="$ctrl.newItem.quantity">
+    <button id="addbtn">Add</button>
   </form>
+
+  </div>
+
+  <div class="container">
+    <section class="categories">
+      <h3 id="item">Item</h3>
+      <h3 id="cost">Cost</h3>
+      <h3 id="quantity">Quantity</h3>
+    </section>
+    
+    <section class="cart" ng-repeat="item in $ctrl.items">
+      <input class="cinput" ng-blur="$ctrl.updateItem(item);" ng-model="item.product">
+      <label>$</label>
+      <input class="cinput" ng-blur="$ctrl.updateItem(item);" ng-model="item.price">
+      <input class="cinput" ng-blur="$ctrl.updateItem(item);" ng-model="item.quantity">
+      <a href="" class="deletebtn" ng-click="$ctrl.removeItem(item.id);"><i class="material-icons md-36">highlight_off</i></a>
+    </section>
+  </div>
+
   `,
   controller: ["CartService", function(CartService) {
     const vm = this;
@@ -27,8 +40,8 @@ const cart = {
       });
       vm.newItem = {};
     };
-    vm.deleteItem = (id) => {
-      CartService.deleteItem(id).then((response) => {
+    vm.removeItem = (id) => {
+      CartService.removeItem(id).then((response) => {
         vm.items = response.data;
       });
     };

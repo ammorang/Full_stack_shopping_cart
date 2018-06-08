@@ -14,7 +14,7 @@ function CartService($http) {
       data: newItem
     });
   };
-  const deleteItem = (id) => {
+  const removeItem = (id) => {
     return $http({
       method: "DELETE",
       url: "/portal/cart-route/" + id
@@ -30,7 +30,7 @@ function CartService($http) {
   return {
     getAllItems,
     addItem,
-    deleteItem,
+    removeItem,
     updateItem
   };
 }
