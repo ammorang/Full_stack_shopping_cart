@@ -13,7 +13,9 @@
     "node": "^10.4.0",
     "pg": "^7.4.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ammorang/Full_stack_shopping_cart.git"

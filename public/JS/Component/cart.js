@@ -9,7 +9,6 @@ const cart = {
     <input class="finput" type="text" placeholder="Product Quantity" ng-model="$ctrl.newItem.quantity">
     <button id="addbtn">Add</button>
   </form>
-
   </div>
 
   <div class="container">
@@ -20,10 +19,9 @@ const cart = {
     </section>
     
     <section class="cart" ng-repeat="item in $ctrl.items">
-      <input class="cinput" ng-blur="$ctrl.updateItem(item);" ng-model="item.product">
-      <label>$</label>
-      <input class="cinput" ng-blur="$ctrl.updateItem(item);" ng-model="item.price">
-      <input class="cinput" ng-blur="$ctrl.updateItem(item);" ng-model="item.quantity">
+      <input class="cinputn" ng-blur="$ctrl.updateItem(item);" ng-model="item.product">
+      <input class="cinputp" ng-blur="$ctrl.updateItem(item);" ng-model="item.price">
+      <input class="cinputq" ng-blur="$ctrl.updateItem(item);" ng-model="item.quantity">
       <a href="" class="deletebtn" ng-click="$ctrl.removeItem(item.id);"><i class="material-icons md-36">highlight_off</i></a>
     </section>
   </div>
